@@ -1,0 +1,20 @@
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Species</th>
+      <th>Vehicles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="character in vm.people track by $index">
+      <td>{{::$index + 1}}</td>
+      <td>{{::character.name}}</td>
+      <td>{{::character.gender}}</td>
+      <td>{{::character.species[0].name}}</td>
+      <td>{{::character.vehicles[0].name}}</td>
+    </tr>
+  </tbody>
+</table>
